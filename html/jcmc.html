@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <script  type="text/javascript" src="/html/common.js?v=1.01"></script>
+    <script type="text/javascript">
+        requireCss('style/dev/base.css');
+        requireCss('style/dev/index.css');
+        requireCss('style/dev/jcmc.css');
+    </script>
+    <title>2016欧洲杯，竞猜名次-天鹰网</title>
+</head>
+
+<body class="p3">
+<div id="zjcp">
+<div id="shai"></div>
+<header>
+    <div class="header">
+        <a href="/"><span class="back">返回</span></a>
+        <ul class="tabch">
+            <li class="noborder select">冠军</li>
+            <li>冠亚军</li>
+        </ul>
+        <span id="menu" class="iconbg1"></span>
+        <!--<span id="select" class="iconbg2"></span>-->
+        <!--菜单-->
+        <ul id="rigmenu">
+            <li class="ic1"><a href="/news/201603/ozhoubei_saicheng.html"> 小组赛赛程</a></li>
+            <li class="ic2"> <a href="/news/30008.html">玩法帮助</a></li>
+        </ul>
+    </div>
+</header>
+<div class="clearfix"></div>
+
+<!--对阵-->
+<div class="tab" style="margin-bottom: 30px">
+    <div class="tupian">
+        <script type="text/javascript">
+            requireImg('image/jcmc/ouzhoubie.jpg');
+        </script>
+    </div>
+    <div class="tit">
+        <li class="t1">编号</li>
+        <li class="t2">球队</li>
+        <li class="t3">赔率</li>
+        <li class="t4">支持率</li>
+        <li class="t5">概率</li>
+    </div>
+    <div class="duiZhen">
+        <section class="borderTop">
+            <ul>
+                <div class="leftpart d1">
+                    <span>1</span>
+                </div>
+                <div class="leftpart d2">
+                    <em class="guoqi"></em>&nbsp;
+                    <span class="matchname">欧罗巴</span>
+                </div>
+                <div class="pul d3">
+                    <li class="noborder" value="3" no="002" name="巴塞尔" data="{no:20160310002,end:false,name:'002',h:'巴塞尔',g:'塞维利亚',rq:'-1',dw:'2016-03-11 周五'}">
+                        <p class="textover">3.00</p>
+                    </li>
+                </div>
+                <div class="leftpart d4">
+                    <progress value="24.5" max="100"/>
+                </div>
+                <div class="leftpart d5">
+                    <span class="gailv">13.59%</span>
+                </div>
+            </ul>
+        </section>
+    </div>
+</div>
+<!--选好了页面-->
+<div class="choose">
+  <div class="header">
+    <span class="back">返回</span>
+    <span class="white tjHeader">竞彩冠军</span>
+    <span class="white allclear" style="float:right;padding-right: 8px">全部清空</span>
+  </div>
+  
+  <div class="clearfix"></div>
+  <div class="shopdiv">
+
+  </div>
+      <div class="footer">
+          <div class="blackbg">
+              <span class="cuan">单关</span>
+              <div class="r1">
+              <span class="white f1">购买</span>
+              <span class="opbtn border-right"></span>
+              <input type="text" class="intext" value="1"/>
+              <span class="opbtn border-left"></span>
+              <span class="white f1">倍</span>
+              </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="linebor">
+              <span id="total"></span>注   <span id="money"></span>元  <span id="yuji">预计奖金</span>：<span class="yellow" id="minprize">35</span><span class="yellow"> ~ </span><span class="yellow" id="maxprize">50</span></span>
+              <br/>
+              <span>将会为你随机分配彩店出票！</span>
+          </div>
+          <div class="whitebg">
+             <!-- <span class="k1">奖金优化</span>-->
+              <span class="k3" id="buy">确认购买</span>
+          </div>
+      </div>
+
+</div>
+<footer>
+    <p class="white center cho">已选择0场</p>
+    <div class="midfo">
+        <span id="count">已选0场</span>
+    </div>
+    <a href="#" id="del" class="del">删除</a>
+</footer>
+<!--弹窗-->
+<div class="mask"></div>
+<div class="opwin hidden">
+   <section>
+       <span class="tabtit seltab">单串过关</span>
+       <span class="tabtit tabbg seltab">多串过关</span>
+   </section>
+    <div class="clearfix"></div>
+    <article class="datasel">
+        <ul class="listcuan">
+
+        </ul>
+    </article>
+    <article class="datasel hidden">
+        <ul class="listcuan">
+
+        </ul>
+    </article>
+    <div class="clearfix"></div>
+    <section class="mt20">
+        <span class="tabtit" id="cancel">取消</span>
+        <span class="tabtit green " id="allright">确定</span>
+    </section>
+    <input type="hidden" class="selhidden"/>
+</div>
+</div>
+<div id="User"></div>
+<div id="load"><div><a></a></div></div>
+</body>
+<script type="text/javascript">
+    requireJs('js/jquery-2.1.1.min.js');
+    requireJs('js/jquery.easing.1.3.js');
+    requireJs('js/swipe.js');
+    requireJs('js/computeCuan.js');
+    requireJs('js/main1.js');
+    requireJs('js/user.js');
+    requireJs('js/lottery/buy-jcmc.js');
+    requireJs('js/module/30008.js');
+    requireJs('js/openWin.js');
+    requireJs('js/labelOp-jcmc.js');
+</script>
+</html>

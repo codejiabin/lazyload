@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <script  type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript">
+        requireCss('../style/dev/base.css');
+        requireCss('../style/dev/home.css');
+        requireCss('../style/dev/person.css');
+    </script>
+    <title>个人中心</title>
+</head>
+<body>
+<div id="perfile" style="display: none">
+    <header>
+        <a href="home.index.html"><span class="backicon"></span></a>
+        <h2 class="center">个人资料</h2>
+    </header>
+    <section class="title">为了你的购彩安全，请如实填写以下信息</section>
+    <section class="bankkh2">
+        <div class="auto border-bottom">
+            <span class="pl4 pr4 pt4 pb4" style="padding-left:1.6em">姓&nbsp;&nbsp;名</span>
+            <span class="w70 pt3" id="uName"></span>
+        </div>
+        <div class="auto border-bottom">
+            <span class="pl4 pr4 pt4 pb4">身份证</span>
+            <span class="w70 pt3 fon" id="shengfen"></span>
+        </div>
+        <div class="auto">
+            <a href="bank.html" id="bankinfo" style="color:#000"> <span class="pl4 pr4 pt4 pb4" id="card">银行卡</span>
+            <span class=" gray1 rigbg mt1 telnum"  >快速绑定</span></a>
+        </div>
+    </section>
+    <section class="bankkh mt1">
+        <span class="pl4 pr4 pt4 ">手机号</span>
+        <span class="pb4 pt4 fon telnum" id="mytel"></span>
+        <a href="home.mobile.html"><span class="mt1 gray1 rigbg " >重新绑定</span></a>
+    </section>
+    <a href="tel:"><div class="kftel">客服热线：0571-8682-5099</div></a>
+
+</div>
+<div id="withdraw" style="display: none"><h1></h1></div>
+<div id="zjcp">
+<header>
+    <a href="/"><span class="backicon"></span></a>
+    <h2 class="center">个人中心</h2>
+</header>
+<section class="middleinfo">
+    <span class="headicon mt5 ml4 fon f11" id="userName"></span>
+    <div class="r pr4 mt6">
+        <span class="f20 fon dismoney" ></span>
+        <span class="pt5">元</span>
+    </div>
+</section>
+<section class="clearfix"></section>
+<section class="chong">
+    <dl class="moneydl auto">
+        <dt class="border-right">
+        <p class="f1 fon dismoney"></p>
+        <p class="gray">余额</p>
+        </dt>
+        <dd class="border-right">
+            <p class="f1 fon" id="prize"></p>
+            <p class="gray">彩金</p>
+        </dd>
+        <dd class="border-right">
+            <a href="home.recharge.html"><p ><span class="icon1"></span></p>
+            <p class="gray">充值</p></a>
+        </dd>
+        <dd class="gray" id="tixian">
+            <p ><span class="icon2"></span></p>
+            <p>提现</p>
+        </dd>
+    </dl>
+</section>
+<section class="bankkh2 mt1 bankadj">
+    <div class="auto border-bottom" id="perfile1">
+        <span class="pl4 pr4 pt4 pb4">个人资料</span>
+        <span class="gray1 rigbg mt22 telnum" id="person">完善个人资料有利于快速提款</span>
+    </div>
+
+    <div class="auto  border-bottom" id="gou">
+      <span class="pl4 pr4 pt4 pb4">购彩记录</span>
+        <span class="rigbg mt1"></span>
+    </div>
+    <a href="home.capital.html">
+    <div class="auto ">
+        <span class="pl4 pr4 pt4 pb4">资金明细</span>
+        <span class="rigbg mt1"></span>
+    </div></a>
+</section>
+    <a href="home.password.html">
+    <section class="bankkh mt1">
+  <span class="pl4 pr4 pt4">修改密码</span>
+    <span class=" mt1 rigbg pb4"></span>
+</section></a>
+<a href='#' class='trueok' onclick="X.home.signOut()">退出登录</a>
+</div>
+<div id="load"><div><a></a></div></div>
+<div id="User"></div>
+</body>
+</html>
+<script type="text/javascript">
+    requireJs('../js/jquery-2.1.1.min.js');
+    requireJs('../js/main.js');
+    requireJs('../js/user.js');
+    requireJs('../js/home.js');
+</script>
+<script>
+    X.home.userInfo();
+    $("#gou").click(function(){
+        window.location.href='home.record.html'
+    })
+</script>

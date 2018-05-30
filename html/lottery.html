@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>购彩</title>
+<meta name="keyword" content="彩票" />
+<meta name="keywords" content="your keywords" />
+<meta name="description" content="your description" />
+<meta name="author" content="author,email address" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<script  type="text/javascript" src="/html/common.js?v=1.01"></script>
+<script type="text/javascript">
+    requireCss('style/dev/base.css');
+    requireCss('style/dev/lottery.css');
+</script>
+</head>
+<body>
+<div id="zjcp">
+    <div id="l1">
+        <header class="uH"><a href="/"></a><h1 id="lT"></h1></header>
+        <div class="lC" id="lC">距<a id="lT2"></a><b id="lIssue">--</b>期 截至时间:<time id="lTime">--</time></div>
+        <div id="p1">
+            <div class="lPlay" id="lPlay"></div>
+            <div id="lBets" class="bets"></div>
+            <div class="lD">
+                <div class="lD1">当前 <span id="curBets"></span>注, <span id="curMoney"></span>元</div>
+                <div class="lD2">
+                    <a id="lRBtn" class="lRBtn">机选</a>
+                    <ul id="lRlist">
+                        <li data="1">1注</li>
+                        <li data="5">5注</li>
+                        <li data="10">10注</li>
+                    </ul>
+                    <a id="lBBtn1" class="lBBtn">投注</a>
+                </div>
+            </div>
+        </div>
+        <div id="p2" class="hide">
+            <div class="lBtns">
+                <a id="lBtns1">手动选号</a>
+                <a id="lBtns2">机选号码</a>
+                <a id="lBtns3">清空列表</a>
+            </div>
+            <ul id="betList"></ul>
+            <div class="lD lDC" id="lottBottom">
+                <div id="useCJB">使用彩金劵</div>
+                <div class="lD1">
+                    <div>
+                        <em>追</em>
+                        <p>
+                            <a class="sub setIssue">-</a>
+                            <a id="issueTxt" onclick="X.l.setIssues();" class="numTxt">1</a>
+                            <a class="add setIssue">+</a>
+                        </p>
+                        <em>期</em>
+                    </div>
+                    <div>
+                        <em>买</em>
+                        <p>
+                            <a class="sub">-</a>
+                            <a id="betTxt" onclick="X.l.setBets();" class="numTxt">1</a>
+                            <a class="add">+</a>
+                        </p>
+                        <em>倍</em>
+                    </div>
+                </div>
+                <div class="lD2 lDC">
+                    <a class="lRBtn lRBtn2" id="openSubmit">发起合买</a>
+                    <span id="Bets"></span>注, <span id="Money"></span>元
+                    <a class="lBBtn" id="buySubmit">购买</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="H">
+        <header class="uH"><a onclick="X.l.closeHemai();"></a><h1>发起合买</h1></header>
+        <div class="hemaiTxt">
+            <div class="HMT1">
+                <label>方案金额</label><div><a id="HMmoney"></a></div>
+            </div>
+            <div class="HMT1">
+                <label>我要认购</label><div><input onblur="X.l.setRG(this);" type="tel" placeholder="" id="HMrengou"/><span>元</span><i>认购金额≧10%</i></div>
+            </div>
+            <div class="HMT1">
+                <label>我要保底</label><div><input onblur="X.l.setBD(this);" type="tel" placeholder="" id="HMbaodi"/><span>元</span><i>保底金额≧5%</i></div>
+            </div>
+            <div class="HMT1">
+                <label>我要提成</label>
+                <div>
+                    <select id="selectPage"><option value="0">0%</option><option value="1">1%</option><option value="2">2%</option><option value="3">3%</option><option value="4">4%</option><option value="5">5%</option><option value="6">6%</option><option value="7">7%</option><option value="8">8%</option><option value="9">9%</option><option value="10">10%</option></select>
+                    <i>提成区间0%～10%</i>
+                </div>
+            </div>
+            <div class="HMT2">
+                <label>保密设置</label>
+                <div id="HMtype"><a id="HMT3" data="3">跟单可见</a><a id="HMT0" data="0">方案公开</a><a id="HMT1" data="1">完全保密</a><a id="HMT2" data="2">截止后可见</a></div>
+            </div>
+            <div class="HMT3"><label>方案标题</label><div><input id="schmeT" type="text" value="合买中大奖,不在是梦"/></div></div>
+            <div class="HMT4"><label>方案描述</label><div><textarea id="schmeD">此单太绝,跟单必盈</textarea></div></div>
+        </div>
+        <div class="b">应支付金额:<i id="HMPrice"></i>元<a id="hemaiSubmit">付款</a></div>
+    </div>
+    <div id="l3">
+        <header class="uH"><a onclick="X.l.closeCJ();"></a><h1>彩金劵</h1></header>
+        <ul id="CJ"></ul>
+    </div>
+</div>
+<div id="InputBox"><header class="IH"><a onclick="X.input.close();"></a><h1 id="InputBoxTitle"></h1></header><div id="InputBoxContent"></div></div>
+<div id="User"></div>
+<div id="load"><div><a></a></div></div>
+<script type="text/javascript">
+    requireJs('js/jquery-2.1.1.min.js');
+    requireJs('js/main.js');
+    requireJs('js/user.js');
+    requireJs('js/lottery.js');
+</script>
+<script type="text/javascript">
+var lid=X.urlHash('lid'),pt= X.urlHash('pt');
+if(!lid){lid=10000;}
+if(!pt){pt='a0';}
+$.ajax({
+    url:resourcePath+'/js/module/'+lid+'.js?v='+resVersion,
+    cache:true,
+    dataType:'script'
+});
+</script>
+</body>
+</html>

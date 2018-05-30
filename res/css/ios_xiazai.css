@@ -1,0 +1,194 @@
+.tianying_logo{
+    font-size:0.36rem;
+    display:flex;
+    justify-content: space-around;
+    background-color: red;
+    padding:0.3rem 0;
+}
+.tianying_logo span{
+    width:33.3333%;
+}
+.tianying_logo span a img{
+    width:0.5rem;
+}
+.tianying_logo span:first-child>a>img{
+    padding-left:0.2rem;
+}
+.tianying_logo span:last-child{
+    width:28%;
+}
+.tianying_logo span:last-child>a>img{
+    padding-left:1.93rem;
+}
+.tianying_logo span:nth-child(2){
+    color:#fff;
+    margin-left:0.8rem;
+}
+.app_logo{
+    width:100%;
+    height:4.97rem;
+    background-image:url("../images/ios_beijing.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    text-align:center;
+}
+.app_logo img{
+    width:2.45rem;
+    margin-top:1.94rem;
+}
+.tianyingcai{
+    text-align:center;
+    font-size:0.44rem;
+}
+.tianyingcai ul li{
+    display:inline-block;
+    padding:0 0.18rem;
+}
+.tianyingcai ul li img{
+    width:0.55rem;
+    vertical-align:bottom;
+}
+.divide_line{
+    width:5.5rem;
+    height:0;
+    border-bottom:0.02rem solid #e3e3e3;
+    margin:0 auto;
+    margin-top:0.8rem;
+}
+div.xiazai{
+    text-align:center;
+    margin-top:0.8rem;
+    height:800%;
+}
+div.xiazai .xiazai_details{
+    color:#b3b1b1;
+}
+div.xiazai .xiazai_details ul li{
+    font-size:23%;
+}
+div.xiazai .xiazai_details ul li:first-child{
+    margin-bottom:0.23rem;
+}
+div.xiazai .xiazai_details ul li:last-child{
+    margin-bottom:0.7rem;
+}
+div.xiazai_btn{
+    width:3.6rem;
+    height:0.8rem;
+    background-color:#f21737;
+    border-radius:0.2rem;
+    padding:0.245rem 0;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+div.xiazai_btn a{
+    font-size:0.28rem;
+    display:block;
+    color:#fff;
+}
+.install_step{
+    margin-top:0.61rem;
+}
+.install_step p{
+    font-size:0.38rem;
+    color:#000;
+    font-weight:500;
+    text-align:left;
+    padding-left:0.54rem;
+    margin-bottom:0.36rem;
+}
+.install_step ul li{
+    font-size:0.28rem;
+    text-align:left;
+    width:90%;
+    margin:0 auto;
+    color:#666;
+}
+.install_step>ul>li:first-child>img{
+    width:4.6rem;
+    height:2.9rem;
+    margin-left:2.1rem;
+}
+
+.install_step>ul>li:nth-child(2)>ul>li{
+    margin-left:1.2rem;
+}
+.install_step>ul>li:nth-child(2)>div{
+    width:100%;
+}
+.install_step>ul>li:nth-child(2)>ul>li>img{
+    width:7.2rem;
+    height:4.88rem;
+    margin-left:1.2rem;
+}
+.install_step>ul>li:nth-child(3)>p{
+    width:80%;
+    font-size:0.26rem;
+    margin-left:-0.5rem;
+    color:#666;
+}
+.install_step>ul>li:nth-child(3)>img{
+    width:4.6rem;
+    height:2.9rem;
+    margin-left:2.1rem;
+}
+.down_app{
+    border-top:0.01rem solid #e3e3e3;
+    border-bottom:0.01rem solid #e3e3e3;
+    padding-top:0.95rem;
+    margin-top:1.65rem;
+}
+.down_app a img{
+    width:110%;
+    margin-left:-0.4rem;
+}
+.update_diary{
+    padding-top:0.82rem;
+    padding-bottom:1.02rem;
+    border-bottom: 0.01rem solid #e3e3e3;
+}
+.app_desc{
+    text-align: left;
+    padding-top:1rem;
+    padding-bottom:0.8rem;
+    color:#666;
+    border-bottom:0.01rem solid #e3e3e3;
+}
+.app_desc dl dt{
+    font-size:0.32rem;
+    margin-left:0.13rem;
+    margin-bottom:0.22rem;
+}
+.app_desc dl dd{
+    font-size:0.3rem;
+    margin-left:0.3rem;
+    margin-bottom:0.5rem;
+    padding-right:0.3rem;
+}
+.jubao{
+    font-size:0.32rem;
+    color:#666;
+    padding-top:0.32rem;
+}
+.jubao>.jubao_title{
+    width:96%;
+    text-align: left;
+    margin-left:0.32rem;
+    margin-bottom: 0.82rem;
+}
+.jubao>a{
+    padding:0.12rem 0.3rem;
+    background:red;
+    border-radius:0.28rem;
+    color:#fff;
+    margin-bottom:0.9rem;
+}
+/*ios_xiazai.html*/
+.tixing{
+    text-align:right;
+}
+.tixing>img{
+    width:52%;
+    margin-right:0.32rem;
+}
+/*ios_xiazai.html*/

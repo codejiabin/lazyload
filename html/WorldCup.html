@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+    <title>世界杯小组赛</title>
+    <script src="../res/js/initial.js"></script>
+    <link rel="stylesheet" href="../res/css/reset.css">
+    <link rel="stylesheet" href="../res/css/worldcup.css">
+</head>
+<body>
+  <div><img src="../images/worldcup.png" alt=""></div>
+  <div class="biankuang">
+      <div class="beijing_biankuang">
+        <img src="../images/xiaozusai_biankuang.png" alt="" data-beijing="beijing">
+        <img src="../images/1_8beijing2.png" alt=""  data-beijing="beijing"/>
+        <img src="../images/1_4beijing1.png" alt="" data-beijing="beijing"/>
+        <img src="../images/1_4beijing1.png" alt="" data-beijing="beijing">
+      </div>
+      <div class="game_nav">
+          <ul>
+              <li>小组赛</li>
+              <li>1/8淘汰赛</li>
+              <li>1/4淘汰赛</li>
+              <li>半决赛决赛</li>
+          </ul>
+      </div>
+      <!--<div class="search_input">-->
+          <!--<input type="text" class="txtSearch" placeholder="搜索你喜欢的球队">-->
+          <!--<span class="search-img">-->
+              <!--<img src="../images/xiaozusai_sousuo.png" alt="">-->
+          <!--</span>-->
+      <!--</div>-->
+      <div class="content">
+          <div class="game_court1" data-game="footgame">
+              <ul>
+                  <li><img src="../images/xiaozu_yeka.png" alt="叶卡捷琳堡"></li>
+                  <li><img src="../images/xiaozu_shengbi.png" alt="圣彼得堡"></li>
+                  <li><img src="../images/xiaozu_luosi.png" alt="罗斯托夫"></li>
+                  <li><img src="../images/xiaozu_sama.png" alt="萨马拉"></li>
+                  <li><img src="../images/xiaozu_suoqi.png" alt="索契"></li>
+                  <li><img src="../images/xiaozu_mosike1.png" alt="莫斯科·卢日尼基"></li>
+                  <li><img src="../images/xiaozu_kafu.png" alt=""></li>
+                  <li><img src="../images/xiaozu_jiali.png" alt=""></li>
+                  <li><img src="../images/xiaozu_salan.png" alt=""></li>
+                  <li><img src="../images/xiaozu_mosike2.png" alt=""></li>
+                  <li><img src="../images/xiaozu_xianuofu.png" alt=""></li>
+                  <li><img src="../images/xiaozu_fuer.png" alt=""></li>
+              </ul>
+          </div>
+          <div class="game_court2" data-game="footgame">
+              <ul>
+                  <li><img src="../images/18_yeka@2x.png" alt=""></li>
+                  <li><img src="../images/18_kashan@2x.png" alt=""></li>
+                  <li><img src="../images/18_mosike1@2x.png" alt=""></li>
+                  <li><img src="../images/18_xianuofu@2x.png" alt=""></li>
+                  <li><img src="../images/18_samala@2x.png" alt=""></li>
+                  <li><img src="../images/18_luois@2x.png" alt=""></li>
+                  <li><img src="../images/18_shengbi@2x.png" alt=""></li>
+                  <li><img src="../images/18_mosike2@2x.png" alt=""></li>
+              </ul>
+          </div>
+          <div class="game_court3" data-game="footgame">
+              <ul>
+                  <li><img src="../images/14_xianuofu@2x.png" alt=""></li>
+                  <li><img src="../images/14_kashan@2x.png" alt=""></li>
+                  <li><img src="../images/14_suoqi@2x.png" alt=""></li>
+                  <li><img src="../images/14_samala@2x.png" alt=""></li>
+              </ul>
+          </div>
+          <div class="game_court4" data-game="footgame">
+              <ul>
+                  <li><img src="../images/banjuesai_shengbi1@2x.png" alt=""></li>
+                  <li><img src="../images/banjuesai_shengbi2@2x.png" alt=""></li>
+                  <li><img src="../images/banjuesai_luri1@2x.png" alt=""></li>
+                  <li><img src="../images/banjuesai_luri2@2x.png" alt=""></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</body>
+<script src="../res/js/jquery-2.1.1.min.js"></script>
+<script>
+    $(function(){
+        $(".game_nav ul li").click(function(){
+            var divShow=$(".content").children("[data-game='footgame']");
+            var beijing=$(".beijing_biankuang").children("[data-beijing='beijing']");
+            var index = $(this).index();
+            $(beijing[index]).show();
+            $(beijing[index]).siblings('img').hide();
+            $(divShow[index]).show();
+            $(divShow[index]).siblings("div").hide();
+        })
+    })
+</script>
+</html>

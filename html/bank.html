@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <script  type="text/javascript" src="/html/common.js?v=1.01"></script>
+    <script type="text/javascript">
+        requireCss('style/dev/base.css');
+        requireCss('style/dev/person.css');
+    </script>
+    <title>绑定银行卡</title>
+</head>
+<body>
+<div id="zjcp">
+<header>
+    <a href="home.index.html?back=1"><span class="backicon"></span></a>
+    <h2 class="center">绑定银行卡</h2>
+</header>
+<form id="bank" method="post">
+<section class="title">请正确填写本人银行卡信息</section>
+<section class="bankkh">
+    <span class="pl4 pr5 pt4">开户银行</span>
+    <span class="redbank"><select id="khbank">
+
+    </select></span>
+</section>
+<section class="clearfix"></section>
+<section class="bankkh1 mt1">
+    <div class="auto border-bottom">
+        <span class="pl4 pr4 pt4 pb4">银行帐号</span>
+        <span class="w70 pt33"><input type="text" class="textinput gray1" placeholder="请填写银行帐号"  id="banknum"/></span>
+    </div>
+    <div class="auto">
+        <span class="pl4 pr4 pt4 pb4">开户姓名</span>
+        <span class="w70 pt33"><input type="text" class="textinput gray1" placeholder="请填写开户姓名" id="khname" /></span>
+    </div>
+</section>
+<section class="bankkh2 mt1">
+    <div class="auto border-bottom">
+        <span class="pl4 pr5 pt4 pb4">开户省份</span>
+        <span class="blackbg gray1"><select id="province" class="mm"></select></span>
+    </div>
+    <div class="auto border-bottom">
+        <span class="pl4 pr5 pt4 pb4">开户城市</span>
+        <span class="blackbg gray1"><select id="city" class="mm"></select></span>
+    </div>
+    <div class="auto" >
+        <span class="pl4 pr5 pt4 pb4">开户支行</span>
+        <span class="blackbg gray1" id=""><select id="subBank" class="mm"></select></span>
+    </div>
+</section>
+
+    <input type="button" value="确认" class="trueok" onclick="X.home.withdraw.bind()"/>
+</form>
+</div>
+<div id="User"></div>
+</body>
+</html>
+<script type="text/javascript">
+    requireJs('js/jquery-2.1.1.min.js');
+    requireJs('js/jquery.easing.1.3.js');
+    requireJs('js/main.js');
+    requireJs('js/user.js');
+    requireJs('js/module/home_new.js');
+    requireJs('js/domop.js');
+    requireJs('js/selectCity.js');
+</script>

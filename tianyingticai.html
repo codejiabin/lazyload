@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>天鹰彩票触屏版手机站-手机买彩票_竞彩_足彩_足球彩票_福利彩票_体育彩票</title>
+    <meta name="keywords" content="天鹰彩票触屏版" />
+    <meta name="description" content="天鹰彩票触屏版" />
+    <meta name="author" content="author,email address" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="favicon.ico" type="image/x-icon" rel=icon>
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link href="favicon.ico" type="image/x-icon" rel="apple-touch-icon-precomposed"/>
+    <link href="favicon.ico" type="image/x-icon" rel="Bookmark"/>
+    <script  type="text/javascript" src="js/common.js?v=1.01"></script>
+
+    <script type="text/javascript">
+        requireCss('style/dev/base.css');
+        requireCss('style/dev/index_new.css');
+        requireJs('js/jquery-2.1.1.min.js');
+    </script>
+</head>
+<body>
+<div id="zjcp" class="" style="height: auto;">
+    <div class="side" style="display: block;">
+        <div class="side_lg hidden" style="display: block;">
+            <h3>登 录</h3><p><input type="text" placeholder="用户名/手机/邮箱" data="user" id="username"></p>
+            <p><input type="password" placeholder="请输入密码" data="pass" id="password"></p>
+            <p><a class="side_reg" onclick="X.user.signUp()">注 册</a><a class="side_login" onclick="X.user._signIn()">登 录</a></p>
+        </div>
+        <ul>
+            <li class="hidden" style="display: none;"><a><b class="short_alias fm"></b>用户名：<span id="showName"></span></a></li>
+            <li class="hidden" style="display: none;"><a><b class="short_balance fm"></b>可用余额：<em><span id="showMoney">00.00</span></em>元</a></li>
+            <li class="hidden" id="short_center" style="display: none;"><a href="/html/home.index.html"><b class="short_center fm"></b>个人中心</a></li>
+            <li class="hidden" id="short_record" style="display: none;"><a href="/html/home.record.html"><b class="short_record fm"> </b>购彩记录</a></li>
+            <li class="hidden" id="short_recharge" style="display: none;"><a href="/html/home.recharge.html"><b class="short_recharge fm"> </b>充值</a></li>
+            <li id="short_award"><a class="fr fm right"></a> <a><b class="short_award fm"></b>开奖信息</a></li>
+            <li id="short_hmHal"><a class="fr fm right"></a> <a><b class="short_hmHal fm"></b>购彩大厅</a></li>
+            <li class="listNav" id="short_digit"><p><a class="fr fm right"></a> <a><b class="short_digit fm">8</b>数字彩</a></p>
+                <ul class="hidden">
+                    <li id="sub_ssq">双色球</li>
+                    <li id="sub_dlt">大乐透</li>
+                    <li id="sub_f3d">福彩3D</li>
+                    <li id="sub_pl3">排列3</li>
+                    <li id="sub_pl5">排列5</li>
+                </ul>
+            </li>
+            <li class="listNav" id="short_athletics"><p><a class="fr fm right"></a> <a><b class="short_athletics fm"></b>竞技彩</a></p><ul class="hidden">
+                <li id="sub_jcz">竞彩足球</li>
+                <li id="sub_jcl">竞彩篮球</li>
+                <li id="sub_ctzc">传统足彩</li>
+                <li id="sub_bjdc">北京单场</li>
+            </ul>
+            </li>
+            <li class="listNav" id="short_freq"><p><a class="fr fm right"></a> <a><b class="short_freq fm"></b>高频彩</a></p>
+                <ul class="hidden">
+                    <li id="sub_syy">十一运夺金</li>
+                </ul>
+            </li>
+        </ul>
+        <p class="tc hidden" id="login_p" style="display: none;"><a class="login_out" onclick="X.user.signOut();">退　　出</a></p>
+    </div>
+    <div class="homeTrans">
+        <header class="homeHeader">
+            <div><span class="return fm"><script class="logo fm">requireImg('images/caidan.png')</script></span>
+                <h1 class="f24"><!--<i class="logo fm"></i> -->
+
+                    <script>requireImg('images/logo.png','logo','logo fm')</script>
+                    <!--<span class="lcont"><span class="ltitle">天鹰彩票</span> <span class="ldes">www.jinmaocp.com</span></span></h1>-->
+                    <span class="pr0" id="p_center"><a href="html/home.index.html"><script>requireImg('images/wode.png')</script></a></span>
+            </div>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="bunner" style="height: 8em;">
+            <div class="addWrap">
+                <div class="swipe" id="mySwipe">
+                    <div class="swiper-wrapper">
+
+
+
+
+
+
+                        <div class="swiper-slide"><a href="html/awards.jsp"><script>requireImg('images/banner1.png')</script></a></div>
+                        <div class="swiper-slide"><a href="#"><script>requireImg('images/banner2.png')</script></a></div>
+                        <div class="swiper-slide"><a href="#"><script>requireImg('images/banner3.png')</script></a></div>
+                    </div>
+                </div>
+                <ul id="position">
+                    <li class="cur"></li>
+                    <li class=""></li>
+                    <li class=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section_three">
+            <span class="tongzhi"><script>requireImg('images/tongzhi.png')</script></span>
+            <span>彩票有风险，投注需谨慎！不向未满18周岁的青少年出售彩票！</span>
+        </div>
+        <div class="section_four">
+            <ul>
+                <li>
+                    <a href="html/draw.html">
+                        <script>requireImg('images/kaijiang.png')</script>
+                        <div class="kaijiang">开奖</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/market.html">
+                        <script>requireImg('images/xiazai.png')</script>
+                        <div class="xiazai">购彩</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/gendan.html">
+                        <script>requireImg('images/zoushi.png')</script>
+                        <div class="zoushi">跟单</div>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="X.user.Chonzhi()">
+                        <script>requireImg('images/zixun.png')</script>
+                        <div class="zixun">充值</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="empty"></div>
+
+
+
+
+        <nav class="nav2">
+            <ul class="clearfiix">
+                <li id="dlt"><a class="focus">大乐透</a></li>
+
+
+
+            </ul>
+        </nav>
+        <div id="main"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section_five">
+            <b>|</b>
+            <span><b>热门彩种</b></span>
+            <span><a href="javascript:void(0)" style="color:#999;padding-left:14.8em;">更多</a></span>
+        </div>
+        <div class="section_seven">
+            <ul class="section_seven_first">
+                <li>
+                    <ul>
+                        <a href="html/competitive.html?pt=a3&l=0">
+                            <li class="item_left">
+                                <script>requireImg('images/zuqiu.png')</script>
+                            </li>
+                        </a>
+                        <li class="item_right">
+                            <div class="jingcaizuqiu"><a href="html/competitive.html?pt=a3&l=0">竞彩足球</a></div>
+                            <div class="jingcaizuqiu__desc">返奖率高达73%</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <a href="html/basketball.html">
+                            <li>
+                                <script>requireImg('images/lanqiu.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcailanqiu"><a href="html/basketball.html">竞彩篮球</a></div>
+                            <div class="jingcaizuqiu__desc">猜胜负，中奖易</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section_seven_first">
+                <li>
+                    <ul>
+                        <a href="/html/chuantong.html?bodynum=2&lotteryId=103&title=传统足球任选九">
+                            <li>
+                                <script>requireImg('images/renxuan.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div  class="jingcaizuqiu"><a href="/html/chuantong.html?bodynum=2&lotteryId=103&title=传统足球任选九">任选9</a></div>
+                            <div class="jingcaizuqiu__desc">小单收货大奖</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <a href="html/lottery.html#lid=10001">
+                            <li>
+                                <div class="daleitou_pic">
+                                    <script>requireImg('images/daleitou.png')</script>
+                                </div>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcaizuqiu"><a href="html/lottery.html#lid=10001">大乐透</a></div>
+                            <div class="jingcaizuqiu__desc">3元赢取1600万</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section_seven_first">
+                <li>
+                    <ul>
+                        <a href="html/szc.html#lid=10004">
+                            <li>
+                                <script>requireImg('images/pailie3.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcaizuqiu"><a href="html/szc.html#lid=10004">排列3</a></div>
+                            <div class="jingcaizuqiu__desc">简单3为赢千元</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <a href="html/lottery.html#lid=10005">
+                            <li>
+                                <script>requireImg('images/pailie5.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcaizuqiu"><a href="html/lottery.html#lid=10005">排列5</a></div>
+                            <div class="jingcaizuqiu__desc">2元赢取10万元</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section_seven_first">
+                <li>
+                    <ul>
+                        <a href="#">
+                            <li>
+                                <script>requireImg('images/xuan5.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcaizuqiu"><a href="#">11选5</a></div>
+                            <div class="jingcaizuqiu__desc">中大奖来这里</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <a href="html/market.html">
+                            <li>
+                                <script>requireImg('images/daletou.png')</script>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="jingcaizuqiu"><a href="html/market.html">更多彩种</a></div>
+                            <div class="jingcaizuqiu__desc">查看其他</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <nav class="nav2">
+            <ul class="clearfiix">
+                <li id="denglu"><a class="focus" href="html/home.index.html">登陆</a></li>
+                <li id="zhuce"><a onclick="X.user.signUp()">注册</a></li>
+                <li id="chongzhi"><a href="html/home.recharge.html">充值</a></li>
+                <li id="bangzhu"><a>帮助</a></li>
+            </ul>
+        </nav>
+        <!--<div id="main"></div>-->
+        <!--<section class="hometitle butdt">-->
+        <!--<h2><div>购彩大厅</div></h2>-->
+        <!--<div class="buyhall">-->
+        <!--<ul class="clearfiix">-->
+        <!--<li id="jcz"><a class="jczq fm" href="html/competitive.html?pt=a3&amp;l=0"></a><p>竞彩足球</p></li>-->
+        <!--<li id="jcl"><a class="jclq fm" href="html/basketball.html"></a><p>竞彩篮球</p></li>-->
+        <!--<li id="bjdc"><a class="bjdc fm" href="html/beidan.html"></a><p>北京单场</p></li>-->
+        <!--<li id="syy"><a class="ysydj fm" href="html/11x5.html#lid=20001&amp;pt=a8"></a><p>十一运夺金</p></li>-->
+        <!--<li id="syx"><a class="syxw fm" href="html/lottery.html#lid=10002&amp;pt=a0"></a><p>七乐彩</p></li>-->
+        <!--<li id="gdsyx"><a class="gdsyxw fm" href="html/lottery.html#lid=10003&amp;pt=a0"></a><p>七星彩</p></li>-->
+        <!--<li id="pl5"><a class="pl5 fm" href="html/lottery.html#lid=10005&amp;pt=a0"></a><p>排列5</p></li>-->
+        <!--<li id="xysc"><a class="xysc fm" href="html/chuantong.html"></a><p>胜负彩</p></li>-->
+        <!--&lt;!&ndash;<li id="xysc"><a class="xysc fm" onclick="alert('暂停销售')"></a><p>幸运赛车</p></li>&ndash;&gt;-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<a class="home_hmmore">更多 <i class="fm"></i></a>&ndash;&gt;-->
+        <!--</section>-->
+        <!--<section id="startList" class="hometitle"></section>-->
+        <!--<section id="notices" class="hometitle">
+            <h2><div>资讯</div></h2>
+        </section>
+        <section class="home_news">
+            <ul>
+                <li id="n_1382">
+                    <i class="fm news_ico"></i>&nbsp;<a>直通欧洲杯，M值换豪礼...</a><a class="fm news_in"></a>
+                </li>
+                <li id="n_1380">
+                    <i class="fm news_ico"></i>&nbsp;<a>豪强决战欧洲杯，组队猜分赢大奖...</a><a class="fm news_in"></a>
+                </li>
+                <li id="n_1366">
+                    <i class="fm news_ico"></i>&nbsp;<a>今日比分上线了...</a><a class="fm news_in"></a>
+                </li>
+            </ul>
+        </section>-->
+        <section class="footer">
+            <h3><a href="#" class="goTop">TOP</a>客服热线：<a href="tel:400-1012-968" style="margin-left:-10px;">0571-8682-5099</a></h3>
+            <p><a class="click" href="html/kehuduanxiazai.html">客户端</a><a href="javaScript:void(0)">触屏版</a><a href="javaScript:void(0)" class="click">PC版</a></p>
+            <p>浙ICP备16021007号</p><p>Copyright (c ) 2017-2020 浙江浩威体育文化版权所有</p>
+        </section>
+    </div>
+</div>
+<div id="User"></div>
+<div class="toast"></div>
+<div  id="loading"></div>
+<script>
+    requireJs('js/main.js');
+    requireJs('js/user.js');
+    requireJs('js/module/index_new.js');
+    requireJs('js/swiper-4.2.2.min.js');
+</script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/user.js"></script>
+<script src="js/index_new.js"></script>
+<script src="js/swiper-4.2.2.min.js"></script>
+<script type="text/javascript">
+    var mySwiper = new Swiper('#mySwipe',{
+        pagination:{
+            el: '.swiper-pagination',
+            bulletActiveClass: 'my-bullet-active',
+        },
+        autoplay: {disableOnInteraction: false,},
+        loop : true
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>提款申请成功</title>
+<meta name="keywords" content="your keywords" />
+<meta name="description" content="your description" />
+<meta name="author" content="author,email address" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<script  type="text/javascript" src="/html/common.js?v=1.01"></script>
+<script type="text/javascript">
+    requireCss('style/dev/base.css');
+    requireCss('style/dev/home.css');
+</script>
+</head>
+<body>
+<div id="zjcp" class="withdrawBack">
+    <a href="home.index.html"><h1 id="process">提款进度</h1></a>
+    <div class="shouli">您的提现请求已受理</div>
+    <section class="statebank">
+       <ul>
+           <li class="bor"><span class="l">提现申请</span><span class="r gray" id="tx">2015-10-22 16:46</span></li>
+           <li class="bor"><span class="l">银行处理</span><span class="r gray" id="banktime">2015-10-22 17:46</span></li>
+           <li><span class="l">预计到帐</span><span class="r gray" id="daozhang">2015-10-22 18:26</span></li>
+       </ul>
+    </section>
+    <a class="btn1" href="/" style="color: #fff;width:90%; margin: 10px auto">去购彩</a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    requireJs('js/jquery-2.1.1.min.js');
+</script>
+<script>
+    Date.prototype.isLeapYear = function()
+    {
+        return (0==this.getYear()%4&&((this.getYear()%100!=0)||(this.getYear()%400==0)));
+    }
+    $(function(){
+       var d=new Date()
+       var y= d.getFullYear();
+       var m= d.getMonth();
+       var day= d.getDate();
+       var h= d.getHours();
+       var f= d.getMinutes();
+       var t1='',t2=''
+        if(h<=9){
+            h='0'+h
+        }
+        if(f<=9){
+            f='0'+f
+        }
+	   var mymonth = parseInt(m+1)
+	   if(mymonth<=9){
+	       mymonth = "0"+mymonth
+	   }
+       var p3=y+'-'+mymonth+'-'+day+" "+h+":"+f
+       $("#tx").text(p3)
+       var allminute=h*60+f;
+       if(allminute>540&&allminute<1050){
+           var fenzhong=f+90
+           var addHous=Math.floor(fenzhong/60)
+           var addMiu=fenzhong%60
+           var hour1=parseInt(h+addHous)
+           if(hour1<=9){
+               hour1="0"+hour1
+           }
+           if(addMiu<=9){
+               addMiu="0"+addMiu
+           }
+           var hour=parseInt(h+1)
+           if(hour<=9){
+               hour="0"+hour
+           }
+           if(f<=9){
+               f="0"+f
+           }
+		   var getmyd=parseInt(m+1)
+		   if(getmyd<=9){
+				getmyd="0"+getmyd
+		   }
+           $("#banktime").text(y+'-'+getmyd+'-'+day+" "+hour+":"+f)
+           $("#daozhang").text(y+'-'+getmyd+'-'+day+" "+hour1+":"+addMiu)
+       }else{
+           var getm='',getd='',aa=[31,28,31,30,31,30,31,31,30,31,30,31],getY=''
+           if(aa[m]==31||aa[m]==30){
+               getd='01'
+               if(parseInt(m+1)==12){
+                   getm='01'
+                   getY=parseInt(y+1)
+               }else{
+                   getm=parseInt(m+2)
+				   if(getm<=9){
+					   getm="0"+getm
+				   }
+				   getY=y
+               }
+           }else if((d.isLeapYear()==false&&aa[m]==28)||(d.isLeapYear()=='false'&&aa[m]==28)){
+               getd='01'
+               getm=parseInt(m+2)
+			   if(getm<=9){
+				   getm="0"+getm
+			   }
+               getY=y
+           }else if((d.isLeapYear()==true&&aa[m]==28)||(d.isLeapYear()=='true'&&aa[m]==28)){
+			   if(day==28){
+				  getd='29'
+				  getm=parseInt(m+1)
+			      if(getm<=9){
+				      getm="0"+getm
+			      }
+			   }else if (day==29){
+				   getd='01'
+				   getm=parseInt(m+2)
+				   if(getm<=9){
+					   getm="0"+getm
+				   }
+			   }
+               getY=y
+           }else{
+               getd=parseInt(day+1)
+               getm=parseInt(m+1)
+			    if(getm<=9){
+				   getm="0"+getm
+			   }
+               getY=y
+           }
+           $("#banktime").text(getY+'-'+getm+'-'+getd+" 09:30")
+           $("#daozhang").text(getY+'-'+getm+'-'+getd+" 10:00")
+       }
+
+    })
+
+</script>

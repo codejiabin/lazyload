@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* 布局需求,上下都间隔*/
+div,ul,li{
+ margin:0rem 0rem;
+ }
+/* 去处a标签的下划线*/
+a {
+text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+body{font-size: 100%;font-family: "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;color: #000}
+a,
+article,
+aside,
+body,
+caption,
+dd,
+div,
+dl,
+dt,
+em,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+label,
+li,
+menu,
+nav,
+ol,
+p,
+section,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul{margin: 0;padding: 0}
+em,
+i,
+s{font-style: normal;text-decoration: none}
+button{cursor: pointer;border: none;-moz-transition: all .3s ease 0s;-webkit-transition: all .3s ease 0s;-o-transition: all .3s ease 0s;transition: all .3s ease 0s}
+.Top_r a,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section{display: block}
+input,
+select,
+textarea{vertical-align: middle;outline: 0;margin: 0;padding: 0}
+img{border: 0;vertical-align: middle;width:100%;}
+li,
+ul{list-style-type: none}
+a{text-decoration: none;outline: 0;color: #666;display: inline-block;-moz-transition: all .3s ease 0s;-webkit-transition: all .3s ease 0s;-o-transition: all .3s ease 0s;transition: all .3s ease 0s}
+a:not(href){cursor: pointer}
