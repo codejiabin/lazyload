@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+    <style>
+        #bigImg{
+            width:600px;
+        }
+        .btn{
+            display:inline-block;
+            height:20px;
+            line-height:20px;
+            border:1px solid #ccc;
+            text-decoration:none;
+            color:#333;
+            padding:5px;
+            font-size:12px;
+        }
+        .btn:active{
+            background-color: #666;
+            color:white;
+        }
+    </style>
+</head>
+<p id="loadImage"></p>
+<p>
+    <a href="javascript:void(0)" class="btn" data-contorl="last">上一张</a>
+    <a href="javascript:void(0)" class="btn" data-contorl="next">下一张</a>
+</p>
+<body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    function loadImageAsync(url) {
+        return new Promise(function(resolve, reject) {
+            var image = new Image();
+
+            image.onload = function() {
+                resolve(image)
+            };
+
+            image.onerror = function() {
+                reject(new Error('图片地址'+url+'加载失败'));
+            };
+
+            image.src = url;
+        });
+    }
+    var imgs=[
+        'images/banner1.png',
+        'images/banner2.png',
+        'images/banner3.png',
+        'images/14_kashan@2x.png'
+    ]
+    var index=0;
+    var len=imgs.length;
+    $(".btn").on("click",function(e){
+        e.preventDefault();
+        if($(this).data('control')==="last"){
+            index=Math.max(0,--index);
+        }else{
+            index=Math.min(len-1,++index);
+            document.title = (index+1)+'/'+len;//改变标题内容
+            $("#bigImg").attr("src",imgs[index]);
+        }
+    })
+    loadImageAsync("images/banner1.png").then(function(value) {
+        value.id="bigImg"
+        console.log(value);
+        var loadImage=document.getElementById("loadImage");
+        loadImage.appendChild(value);
+    })
+    function other() {
+        console.log('无阻塞执行其他的函数')
+    }
+    other() ;
+</script>
+</body>
+</html>
