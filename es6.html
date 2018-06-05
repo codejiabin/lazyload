@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6语法练习</title>
+</head>
+<body>
+<script>
+    var foo='bar';
+    var baz={foo};
+    var baz={foo:foo};
+    var o={
+        method(){
+            return 'hello!';
+        }
+    }
+    var o={
+        method:function(){
+            return "hello!";
+        }
+    }
+    function getPoint(){
+        var x=1;
+        var y=10;
+        return {x,y};
+    }
+    console.log(getPoint());
+    var ms={};
+    function getItem(){
+        return key in ms?ms[key]:null;
+    }
+    function setItem(key,value){
+        ms[key]=value;
+    }
+    function clear(){
+        ms={};
+    }
+    var mySymbol=Symbol();
+    var target={a:1,a1:3};
+    target[mySymbol]='hello';
+    var source1={b:2};
+    var source2={c:3};
+    Object.assign(target,source1,source2);
+    console.log(target);
+    var obj1={a:{b:1}};
+    var obj2=Object.assign({},obj1,source1);
+   obj1.a.b=2;
+    console.log(obj2);
+    function clone(origin){
+       let originProto=Object.getPrototypeOf(origin);
+       return Object.assign(Object.create(originProto),origin);
+    }
+    var t1=Object.getOwnPropertySymbols(target);
+    var t2=Object.getOwnPropertyNames(target)
+    console.log(t1);console.log(t2);
+    let {keys, values, entries} = Object;
+    let obj = { a: 1, b: 2, c: 3 };
+    console.log(Object.entries(obj));
+    for(let [key,value] of entries(obj)){
+        console.log([key,value]);
+    }
+    function push(array,...items){
+        items.forEach(function(item){
+            array.push(item);
+            console.log(item);
+        });
+    }
+    var a=[];
+    push(a,1,2,3);
+    var arr1=['a','b'];
+    var arr2=['c'];
+    var arr3=['d','e'];
+    var arrx=[...arr1,...arr2,...arr3];
+    console.log(arrx);
+    function Timer(){
+        this.s1=0;
+        this.s2=0;
+
+        setInterval(()=>{
+            this.s1++
+        },1000);
+        setInterval(function(){
+            this.s2++
+        },1000)
+    }
+    var timer=new Timer();
+    setTimeout(()=>console.log('s1: ', timer.s1), 3100);
+    setTimeout(()=>console.log('s2:',timer.s2),3100);
+    console.log('abc'.charAt(1));
+    console.log('hello'.repeat(2));
+    let name='hzzly',time='today';
+    console.log(`hello${name},how are you ${time}`)
+    function example(){
+        return{
+            foo1:1,
+            bar:2
+        }
+    }
+    let{foo1,bar}=example();
+    console.log(foo1,bar);
+</script>
+</body>
+</html>
