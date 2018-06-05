@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b65f0485-cc45-4eb3-bd46-846bca8732fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lazyLoad.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lazyload2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/awards.jsp" afterPath="$PROJECT_DIR$/html/awards.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/ios_details.html" afterPath="$PROJECT_DIR$/html/ios_details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promise.html" afterPath="$PROJECT_DIR$/promise.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lazyLoad.html" afterPath="$PROJECT_DIR$/lazyLoad.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,17 +63,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lazyLoad.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lazyLoad.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lazyLoad.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="492">
+              <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lazyload2.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lazyload2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lazyload2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
@@ -152,8 +144,8 @@
         <option value="$PROJECT_DIR$/html/awards.jsp" />
         <option value="$PROJECT_DIR$/es6test.html" />
         <option value="$PROJECT_DIR$/es6.html" />
-        <option value="$PROJECT_DIR$/lazyLoad.html" />
         <option value="$PROJECT_DIR$/lazyload2.html" />
+        <option value="$PROJECT_DIR$/lazyLoad.html" />
       </list>
     </option>
   </component>
@@ -199,6 +191,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="h5tianying" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5tianying" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h5tianying" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,15 +336,15 @@
       <workItem from="1527666168530" duration="6173000" />
       <workItem from="1527816012998" duration="18796000" />
       <workItem from="1528075606935" duration="4452000" />
-      <workItem from="1528162603250" duration="16998000" />
+      <workItem from="1528162603250" duration="17117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86655000" />
+    <option name="totallyTimeSpent" value="86774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.084895834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -718,18 +724,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lazyLoad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lazyload2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="106" column="54" lean-forward="true" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lazyLoad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding />
         </state>
       </provider>
